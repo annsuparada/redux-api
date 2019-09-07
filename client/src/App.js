@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UsersList from './components/PostsList';
+import UsersList from './components/UsersList';
 import PostsList from './components/PostsList';
 import './App.css';
 
