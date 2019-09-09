@@ -4,11 +4,12 @@ import { getUsers } from '../action'
 import Loader from 'react-loader-spinner'
 
 import User from './User'
+import { Button } from './style' 
 
 const UsersList = props => {
     return (
         <>
-        <button onClick={props.getUsers}>
+        <Button onClick={props.getUsers}>
         {props.isLoading ? (
                 <Loader
                     type="TailSpin"
@@ -18,7 +19,7 @@ const UsersList = props => {
             /> ):(
             'See User'
             )}
-        </button>
+        </Button>
         {props.error && <p className="error">{props.error}</p>}
         {props.users && props.users.map(user => (
             <User key={user.id} user={user} />
